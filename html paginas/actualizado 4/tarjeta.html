@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&family=DM+Sans:wght@400;500&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        :root {
+            --bg-card: #1A1A1A;
+            --accent: #C8102E;
+            --btn-promo: #FF6B00;
+            /* Naranja Dodge para llamar la atención */
+            --text-pri: #FFFFFF;
+            --text-sec: #A0A0A0;
+            --font-title: 'Barlow Condensed', sans-serif;
+            --font-body: 'DM Sans', sans-serif;
+        }
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            background: transparent;
+            font-family: var(--font-body);
+            overflow-x: hidden;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            padding: 20px 10px;
+            background: #0D0D0D;
+        }
+
+        .vcard {
+            background: var(--bg-card);
+            width: 100%;
+            max-width: 450px;
+            border-top: 4px solid var(--accent);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+            padding: 40px 25px;
+            text-align: center;
+            position: relative;
+        }
+
+        .profile-img {
+            width: 130px;
+            height: 130px;
+            border: 3px solid var(--accent);
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+
+        .name {
+            font-family: var(--font-title);
+            font-size: 2.2rem;
+            text-transform: uppercase;
+            margin: 0;
+            color: var(--text-pri);
+        }
+
+        .title {
+            color: var(--accent);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 25px;
+            display: block;
+        }
+
+        /* BOTONES DE ACCIÓN PRINCIPAL */
+        .main-actions {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-bottom: 25px;
+        }
+
+        .btn-action {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 15px 5px;
+            text-decoration: none;
+            font-family: var(--font-title);
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            border-radius: 2px;
+            transition: 0.3s;
+        }
+
+        .btn-promo {
+            background: var(--btn-promo);
+            color: white;
+        }
+
+        .btn-map {
+            background: #333;
+            color: white;
+            border: 1px solid #444;
+        }
+
+        .btn-action i {
+            margin-bottom: 8px;
+        }
+
+        .btn-action:hover {
+            filter: brightness(1.2);
+            transform: translateY(-2px);
+        }
+
+        /* CONTACT GRID */
+        .contact-grid {
+            display: grid;
+            gap: 10px;
+            margin-bottom: 25px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            background: #252525;
+            padding: 14px;
+            text-decoration: none;
+            color: var(--text-pri);
+            transition: 0.3s;
+            font-size: 0.95rem;
+        }
+
+        .contact-item:hover {
+            background: #2a2a2a;
+            border-left: 4px solid var(--accent);
+        }
+
+        .contact-item i {
+            margin-right: 15px;
+            color: var(--accent);
+        }
+
+        .btn-vcf {
+            background: var(--accent);
+            color: white;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            font-family: var(--font-title);
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .brands-footer {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            opacity: 0.4;
+        }
+
+        .brands-footer img {
+            height: 12px;
+            filter: brightness(100);
+        }
+    </style>
+</head>
+
+<body>
+    <!--https://res.cloudinary.com/dbxa0pozm/image/upload/v1775709817/Luis_tarjeta_gd45h6.jpg-->
+    <div class="container">
+        <div class="vcard">
+            <img src="https://res.cloudinary.com/dbxa0pozm/image/upload/w_400,q_auto,f_auto/Luis_tarjeta_gd45h6.jpg"
+                alt="Luis Martínez" class="profile-img">
+
+            <h1 class="name">Luis Martínez</h1>
+            <span class="title">Consultor Stellantis Certificado</span>
+
+            <div class="main-actions">
+                <a href="https://sites.google.com/view/stellantis-promos/promo_stellantis" class="btn-action btn-promo">
+                    <i data-lucide="tag" size="24"></i>
+                    Ver Promociones
+                </a>
+                <a href="https://maps.app.goo.gl/Bj3hqeTXvDv5hKSg7" target="_blank" class="btn-action btn-map">
+                    <i data-lucide="map-pin" size="24"></i>
+                    Mi Ubicación
+                </a>
+            </div>
+
+            <div class="contact-grid">
+                <a href="https://wa.me/525521787900" class="contact-item">
+                    <i data-lucide="message-circle"></i>
+                    <span>Chat por WhatsApp</span>
+                </a>
+                <a href="mailto:luis.martinez.autos@gmail.com" class="contact-item">
+                    <i data-lucide="mail"></i>
+                    <span>Correo Electrónico</span>
+                </a>
+                <a href="tel:+525521787900" class="contact-item">
+                    <i data-lucide="phone"></i>
+                    <span>Llamada de Venta</span>
+                </a>
+            </div>
+
+            <button class="btn-vcf">
+                <div style="display:flex; gap:10px; flex-wrap:wrap;">
+
+                    <a href="https://res.cloudinary.com/dbxa0pozm/raw/upload/v1775709352/contacto_ibef2r.vcf"
+                        download="contacto.vcf" class="btn-vcf">
+                        <i data-lucide="user-plus"></i>
+                        Guardar Contacto
+                    </a>
+
+                    <a href="https://wa.me/?text=Hola%2C%20te%20comparto%20mi%20contacto%3A%20https%3A%2F%2Fres.cloudinary.com%2Fdbxa0pozm%2Fraw%2Fupload%2Fv1775709352%2Fcontacto_ibef2r.vcf"
+                        target="_blank" rel="noopener" class="btn-vcf">
+                        <i data-lucide="share-2"></i>
+                        Compartir por WhatsApp
+                    </a>
+
+                </div>
+            </button>
+
+            <div class="brands-footer">
+                <img src="https://www.stellantis.com/content/dam/stellantis-corporate/brands/logos/white/logo_ram_white.png"
+                    alt="RAM">
+                <img src="https://www.stellantis.com/content/dam/stellantis-corporate/brands/logos/white/logo_jeep_white.png"
+                    alt="Jeep">
+                <img src="https://www.stellantis.com/content/dam/stellantis-corporate/brands/logos/white/logo_dodge_white.png"
+                    alt="Dodge">
+            </div>
+        </div>
+    </div>
+
+    <script>lucide.createIcons();</script>
+</body>
+
+</html>

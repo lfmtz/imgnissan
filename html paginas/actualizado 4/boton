@@ -1,0 +1,24 @@
+<style>
+    .back-btn {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        background: rgba(0, 0, 0, 0.7);
+        color: #fff;
+        padding: 10px 16px;
+        border-radius: 30px;
+        font-family: sans-serif;
+        text-decoration: none;
+        font-size: 14px;
+        backdrop-filter: blur(6px);
+        transition: all .3s ease;
+        z-index: 9999;
+    }
+
+    .back-btn:hover {
+        background: #000;
+        transform: scale(1.05);
+    }
+</style>
+
+<a href="https://sites.google.com/view/stellantis-promos/promo_stellantis" class="back-btn">← Regresar</a>
